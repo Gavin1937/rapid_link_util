@@ -1,0 +1,10 @@
+
+# folder
+/__pycache__/
+/.vscode/
+/data/
+
+# file
+*.sh
+*main*
+*test*
