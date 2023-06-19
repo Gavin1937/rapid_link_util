@@ -5,6 +5,7 @@
   "homepage": ".",
   "keywords": [],
   "author": "Gavin1937",
+  "license": "GPLV3",
   "dependencies": {
     "bootstrap": "^4.0.0",
     "install": "^0.13.0",
