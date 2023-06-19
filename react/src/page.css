@@ -1,0 +1,14 @@
+
+.fadeout {
+    opacity: 100%;
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 100%;
+    }
+    to {
+        opacity: 0%;
+    }
+}
+
