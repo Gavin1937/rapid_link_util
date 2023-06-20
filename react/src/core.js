@@ -3,11 +3,16 @@ const Base64 = require('js-base64');
 
 
 async function calc_file_info(file_obj, file_bytes) {
+  let file_name = file_obj.name;
+  let file_len = file_obj.size;
   let file_md5 = await md5(file_bytes).toUpperCase();
-  let file_slice_md5 = await md5(file_bytes.slice(0, 262144)).toUpperCase();
+  // 文件前256KB的MD5
+  // 如果文件小于256KB, 则计算整个文件的MD5
+  let file_slice_md5 = await md5(file_bytes.slice(0, Math.min(file_len,262144))).toUpperCase();
+  
   return {
-    'file_name':file_obj.name,
-    'file_len':file_obj.size,
+    'file_name':file_name,
+    'file_len':file_len,
     'file_md5':file_md5,
     'file_slice_md5':file_slice_md5,
   };
