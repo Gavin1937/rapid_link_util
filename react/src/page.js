@@ -151,6 +151,13 @@ export default function Main(props) {
       }
       setData(output);
       setReady(true);
+    }).catch((err) => {
+      console.error(err);
+      
+      let prompt = document.querySelector('.convert-err-prompt');
+      prompt.innerHTML = err;
+      prompt.style.display = 'block';
+      return;
     });
   }
   

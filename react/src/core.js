@@ -98,13 +98,13 @@ export async function convert_rapid_link(link, target_type) {
         };
         break;
       default:
-        throw Error('Input link is not support.');
+        throw Error('输入的链接必须为: 秒传标准码长链(梦姬), BaiduPCS-Go, 或者PanDownload 链接');
       }
       break;
     }
   }
   if (file_info === null) {
-    throw Error('Input link is not support.');
+    throw Error('输入的链接必须为: 秒传标准码长链(梦姬), BaiduPCS-Go, 或者PanDownload 链接');
   }
   
   let output = [];
