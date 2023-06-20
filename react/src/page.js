@@ -167,7 +167,7 @@ export default function Main(props) {
       <h1 className="text-center py-3">计算百度云秒传链接, 或者在几类不同的链接之间转换。</h1>
       <Row className="py-2">
         
-        <Col className="create">
+        <Col className="create" md={6} sm={12}>
           <Card>
             <Card.Body>
               <Card.Title className="create-err-prompt" style={{display:'none',color:'red',fontWeight:'bolder'}}>
@@ -194,7 +194,7 @@ export default function Main(props) {
           </Card>
         </Col>
         
-        <Col className="convert">
+        <Col className="convert" md={6} sm={12} >
           <Card>
             <Card.Body>
               <Card.Title className="convert-err-prompt" style={{display:'none',color:'red',fontWeight:'bolder'}}>
@@ -222,7 +222,7 @@ export default function Main(props) {
         
       </Row>
       
-      <Row className="result py-2">
+      <Row className="result py-2 px-3">
         <h1>结果</h1>
         <span
         style={{
